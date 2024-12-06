@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .filter-group {
+            margin-bottom: 10px;
+        }
+        .job {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .job h2 {
+            margin: 0 0 5px;
+        }
+        .job p {
+            margin: 5px 0;
+        }
+        .job a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .job a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Listings</h1>
+        <input type="file" id="file-input" accept=".json" />
+        <div class="filter-group">
+            <label for="filter-level">Filter by Level:</label>
+            <select id="filter-level">
+                <option value="">All</option>
+            </select>
+
+            <label for="filter-type">Filter by Type:</label>
+            <select id="filter-type">
+                <option value="">All</option>
+            </select>
+
+            <label for="filter-skill">Filter by Skill:</label>
+            <select id="filter-skill">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="sort-options">Sort by:</label>
+            <select id="sort-options">
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+                <option value="posted-asc">Posted Time (Newest First)</option>
+                <option value="posted-desc">Posted Time (Oldest First)</option>
+            </select>
+        </div>
+        <div id="job-listings"></div>
+    </div>
+    <script src="JobAnalysis.js"></script>
+</body>
+</html>
